@@ -1,0 +1,429 @@
+{% extends "base.html" %}
+
+{% block title %}Our Solutions & Technologies - Open Pulse Security{% endblock %}
+{% block description %}Discover the proven open-source cybersecurity technologies we use. Transparent, reliable, and battle-tested solutions for enterprise security.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="solutions-hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">Our Proven Security Solutions</h1>
+            <p class="hero-subtitle">
+                We believe in transparency. Every tool we use is open-source, battle-tested, 
+                and trusted by enterprises worldwide. See exactly what powers your security.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Open Source</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solutions Grid -->
+<section class="solutions-grid-section">
+    <div class="solutions-container">
+        <div class="section-header">
+            <h2 class="section-title">Core Security Technologies</h2>
+            <p class="section-subtitle">
+                Industry-leading open-source solutions that form the backbone of our security services
+            </p>
+        </div>
+
+        <div class="solutions-grid">
+            <!-- WireGuard -->
+            <div class="solution-card featured">
+                <div class="solution-header">
+                    <div class="solution-logo">
+                        <img src="{{ url_for('static', filename='images/wireguard-logo.png') }}" alt="WireGuard Logo" onerror="this.style.display='none'">
+                        <div class="solution-icon">🔒</div>
+                    </div>
+                    <div class="solution-title-area">
+                        <h3 class="solution-title">WireGuard VPN</h3>
+                        <div class="solution-category">VPN Technology</div>
+                    </div>
+                </div>
+                
+                <div class="solution-description">
+                    <p>
+                        WireGuard is a revolutionary VPN protocol that's faster, simpler, and more secure 
+                        than traditional VPN solutions. It uses state-of-the-art cryptography and has been 
+                        audited by security experts worldwide.
+                    </p>
+                </div>
+
+                <div class="solution-features">
+                    <h4>Key Benefits:</h4>
+                    <ul>
+                        <li>10x faster than OpenVPN</li>
+                        <li>Minimal attack surface (4,000 lines of code vs 600,000+)</li>
+                        <li>Built into Linux kernel</li>
+                        <li>Cross-platform compatibility</li>
+                        <li>Perfect forward secrecy</li>
+                    </ul>
+                </div>
+
+                <div class="solution-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">2016</span>
+                        <span class="stat-label">First Released</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">Linux</span>
+                        <span class="stat-label">Kernel Integration</span>
+                    </div>
+                </div>
+
+                <div class="solution-links">
+                    <a href="https://www.wireguard.com/" target="_blank" class="solution-link primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Official Website
+                    </a>
+                    <a href="https://github.com/WireGuard" target="_blank" class="solution-link secondary">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </a>
+                    <a href="https://www.wireguard.com/papers/wireguard.pdf" target="_blank" class="solution-link secondary">
+                        <i class="fas fa-file-pdf"></i>
+                        Technical Paper
+                    </a>
+                </div>
+            </div>
+
+            <!-- pfSense -->
+            <div class="solution-card">
+                <div class="solution-header">
+                    <div class="solution-logo">
+                        <img src="{{ url_for('static', filename='images/pfsense-logo.png') }}" alt="pfSense Logo" onerror="this.style.display='none'">
+                        <div class="solution-icon">🛡️</div>
+                    </div>
+                    <div class="solution-title-area">
+                        <h3 class="solution-title">pfSense Firewall</h3>
+                        <div class="solution-category">Network Security</div>
+                    </div>
+                </div>
+                
+                <div class="solution-description">
+                    <p>
+                        pfSense is a powerful, enterprise-grade firewall and router platform based on FreeBSD. 
+                        It provides comprehensive network security features and can run on any x86 hardware, 
+                        giving you complete vendor independence.
+                    </p>
+                </div>
+
+                <div class="solution-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Stateful packet filtering</li>
+                        <li>VPN server & client support</li>
+                        <li>Intrusion detection & prevention</li>
+                        <li>Traffic shaping & load balancing</li>
+                        <li>Web-based management interface</li>
+                        <li>Package system for extensions</li>
+                    </ul>
+                </div>
+
+                <div class="solution-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">2004</span>
+                        <span class="stat-label">First Released</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">1M+</span>
+                        <span class="stat-label">Active Installs</span>
+                    </div>
+                </div>
+
+                <div class="solution-links">
+                    <a href="https://www.pfsense.org/" target="_blank" class="solution-link primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Official Website
+                    </a>
+                    <a href="https://github.com/pfsense/pfsense" target="_blank" class="solution-link secondary">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </a>
+                    <a href="https://docs.netgate.com/pfsense/en/latest/" target="_blank" class="solution-link secondary">
+                        <i class="fas fa-book"></i>
+                        Documentation
+                    </a>
+                </div>
+            </div>
+
+            <!-- Wazuh -->
+            <div class="solution-card">
+                <div class="solution-header">
+                    <div class="solution-logo">
+                        <img src="{{ url_for('static', filename='images/wazuh-logo.png') }}" alt="Wazuh Logo" onerror="this.style.display='none'">
+                        <div class="solution-icon">🔍</div>
+                    </div>
+                    <div class="solution-title-area">
+                        <h3 class="solution-title">Wazuh SIEM</h3>
+                        <div class="solution-category">Endpoint Security</div>
+                    </div>
+                </div>
+                
+                <div class="solution-description">
+                    <p>
+                        Wazuh is a comprehensive security monitoring platform that provides threat detection, 
+                        integrity monitoring, incident response, and compliance reporting. It's trusted by 
+                        thousands of organizations worldwide for endpoint security.
+                    </p>
+                </div>
+
+                <div class="solution-features">
+                    <h4>Capabilities:</h4>
+                    <ul>
+                        <li>Real-time threat detection</li>
+                        <li>File integrity monitoring</li>
+                        <li>Log analysis & correlation</li>
+                        <li>Vulnerability assessment</li>
+                        <li>Compliance reporting (PCI DSS, GDPR, HIPAA)</li>
+                        <li>Incident response automation</li>
+                    </ul>
+                </div>
+
+                <div class="solution-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">2015</span>
+                        <span class="stat-label">Founded</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">10K+</span>
+                        <span class="stat-label">Organizations</span>
+                    </div>
+                </div>
+
+                <div class="solution-links">
+                    <a href="https://wazuh.com/" target="_blank" class="solution-link primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Official Website
+                    </a>
+                    <a href="https://github.com/wazuh/wazuh" target="_blank" class="solution-link secondary">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </a>
+                    <a href="https://documentation.wazuh.com/" target="_blank" class="solution-link secondary">
+                        <i class="fas fa-book"></i>
+                        Documentation
+                    </a>
+                </div>
+            </div>
+
+            <!-- OpenVAS -->
+            <div class="solution-card">
+                <div class="solution-header">
+                    <div class="solution-logo">
+                        <img src="{{ url_for('static', filename='images/openvas-logo.png') }}" alt="OpenVAS Logo" onerror="this.style.display='none'">
+                        <div class="solution-icon">🔬</div>
+                    </div>
+                    <div class="solution-title-area">
+                        <h3 class="solution-title">OpenVAS Scanner</h3>
+                        <div class="solution-category">Vulnerability Assessment</div>
+                    </div>
+                </div>
+                
+                <div class="solution-description">
+                    <p>
+                        OpenVAS is a powerful vulnerability scanner and management solution. It provides 
+                        comprehensive vulnerability assessments and is capable of testing for over 50,000 
+                        known vulnerabilities across networks, systems, and applications.
+                    </p>
+                </div>
+
+                <div class="solution-features">
+                    <h4>Features:</h4>
+                    <ul>
+                        <li>50,000+ vulnerability tests</li>
+                        <li>Network & web application scanning</li>
+                        <li>Authenticated & unauthenticated scans</li>
+                        <li>Detailed vulnerability reports</li>
+                        <li>Risk assessment & prioritization</li>
+                        <li>Compliance scanning</li>
+                    </ul>
+                </div>
+
+                <div class="solution-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">2009</span>
+                        <span class="stat-label">First Released</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">50K+</span>
+                        <span class="stat-label">Vulnerability Tests</span>
+                    </div>
+                </div>
+
+                <div class="solution-links">
+                    <a href="https://www.openvas.org/" target="_blank" class="solution-link primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Official Website
+                    </a>
+                    <a href="https://github.com/greenbone/openvas-scanner" target="_blank" class="solution-link secondary">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </a>
+                    <a href="https://docs.greenbone.net/" target="_blank" class="solution-link secondary">
+                        <i class="fas fa-book"></i>
+                        Documentation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Open Source Section -->
+<section class="why-opensource">
+    <div class="opensource-container">
+        <div class="section-header">
+            <h2 class="section-title">Why We Choose Open Source</h2>
+            <p class="section-subtitle">
+                Open source isn't just our preference—it's our commitment to transparency, security, and your independence
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">🔍</div>
+                <h3>Complete Transparency</h3>
+                <p>Every line of code is open for inspection. No hidden backdoors, no secret vulnerabilities. You can verify exactly what's protecting your business.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">💰</div>
+                <h3>Cost Effective</h3>
+                <p>No expensive licensing fees or vendor lock-in. Open source solutions provide enterprise-grade security without the enterprise price tag.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">🛠️</div>
+                <h3>Vendor Independence</h3>
+                <p>You're not tied to any single vendor. If hardware fails or vendors change policies, your security solutions continue to work.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">🌍</div>
+                <h3>Community Driven</h3>
+                <p>Backed by global communities of security experts. Faster bug fixes, continuous improvements, and collective intelligence.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">🔒</div>
+                <h3>Security by Design</h3>
+                <p>Open source security tools are scrutinized by thousands of experts worldwide. Vulnerabilities are found and fixed quickly.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">⚡</div>
+                <h3>Rapid Innovation</h3>
+                <p>Open source projects evolve faster than proprietary solutions. You get cutting-edge features and improvements continuously.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Integration & Support -->
+<section class="integration-support">
+    <div class="support-container">
+        <div class="support-content">
+            <div class="support-text">
+                <h2>Professional Implementation & Support</h2>
+                <p class="lead-text">
+                    While these tools are open source and free, implementing them correctly requires expertise. 
+                    That's where we come in.
+                </p>
+                <div class="support-features">
+                    <div class="support-feature">
+                        <i class="fas fa-cogs"></i>
+                        <div>
+                            <h4>Expert Configuration</h4>
+                            <p>We configure each solution specifically for your environment and security requirements.</p>
+                        </div>
+                    </div>
+                    <div class="support-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>Security Hardening</h4>
+                            <p>Every installation is hardened according to industry best practices and compliance standards.</p>
+                        </div>
+                    </div>
+                    <div class="support-feature">
+                        <i class="fas fa-headset"></i>
+                        <div>
+                            <h4>Ongoing Support</h4>
+                            <p>24/7 monitoring, maintenance, and support to ensure your security solutions stay effective.</p>
+                        </div>
+                    </div>
+                    <div class="support-feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h4>Training & Documentation</h4>
+                            <p>We provide comprehensive training and documentation so your team can manage the systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="support-visual">
+                <div class="integration-diagram">
+                    <div class="integration-center">
+                        <div class="center-node">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Your Business</span>
+                        </div>
+                    </div>
+                    <div class="integration-nodes">
+                        <div class="integration-node" style="--angle: 0deg;">
+                            <i class="fas fa-lock"></i>
+                            <span>WireGuard</span>
+                        </div>
+                        <div class="integration-node" style="--angle: 90deg;">
+                            <i class="fas fa-firewall"></i>
+                            <span>pfSense</span>
+                        </div>
+                        <div class="integration-node" style="--angle: 180deg;">
+                            <i class="fas fa-search"></i>
+                            <span>Wazuh</span>
+                        </div>
+                        <div class="integration-node" style="--angle: 270deg;">
+                            <i class="fas fa-bug"></i>
+                            <span>OpenVAS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="solutions-cta">
+    <div class="cta-container">
+        <h2>Ready to Implement These Solutions?</h2>
+        <p>
+            Let our experts configure and deploy these proven security technologies for your business. 
+            Get started with a free consultation and security assessment.
+        </p>
+        <div class="cta-actions">
+            <a href="{{ url_for('main.contact') }}" class="cta-button primary">
+                <span>Get Free Consultation</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="{{ url_for('main.services') }}" class="cta-button secondary">
+                <span>View Our Services</span>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

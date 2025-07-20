@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>🛡️ Trusted Cybersecurity Partner</span>
+            </div>
+            <h1 class="hero-title">
+                Secure Your Digital Future with
+                <span class="highlight">Open Pulse Security</span>
+            </h1>
+            <p class="hero-subtitle">
+                Enterprise-grade cybersecurity solutions powered by open-source technology.
+                Protect your business from evolving threats with our comprehensive security services.
+            </p>
+            <div class="hero-actions">
+                <a href="{{ url_for('main.services') }}" class="cta-button primary">
+                    <span>Explore Our Services</span>
+                    <i class="arrow">→</i>
+                </a>
+                <a href="{{ url_for('main.contact') }}" class="cta-button secondary">
+                    <span>Get Free Consultation</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime Guarantee</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Monitoring</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Businesses Protected</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="security-shield">
+                <div class="shield-layer"></div>
+                <div class="shield-layer"></div>
+                <div class="shield-layer"></div>
+                <div class="shield-core">🛡️</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+    <div class="about-container">
+        <div class="section-header">
+            <h2 class="section-title">Why Choose Open Pulse Security?</h2>
+            <p class="section-subtitle">
+                Leading the industry with innovative open-source cybersecurity solutions
+            </p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="lead-text">
+                    At Open Pulse Security, we specialize in providing cutting-edge cybersecurity
+                    solutions tailored to your business needs. Our mission is to protect your
+                    business and employees from evolving digital threats using state-of-the-art
+                    open-source technologies.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">✓</div>
+                        <div class="highlight-text">
+                            <strong>Proven Track Record:</strong> Successfully protecting businesses for over 5 years
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">✓</div>
+                        <div class="highlight-text">
+                            <strong>Cost-Effective Solutions:</strong> Open-source technology reduces licensing costs
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">✓</div>
+                        <div class="highlight-text">
+                            <strong>24/7 Support:</strong> Round-the-clock monitoring and incident response
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="image-placeholder">
+                    <div class="security-icons">
+                        <div class="floating-icon" style="--delay: 0s;">🔒</div>
+                        <div class="floating-icon" style="--delay: 1s;">🛡️</div>
+                        <div class="floating-icon" style="--delay: 2s;">🔍</div>
+                        <div class="floating-icon" style="--delay: 3s;">⚡</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="features-container">
+        <div class="section-header">
+            <h2 class="section-title">Our Core Strengths</h2>
+            <p class="section-subtitle">
+                Comprehensive cybersecurity solutions built on industry-leading practices
+            </p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">🔓</div>
+                    <h3>Open Source Excellence</h3>
+                </div>
+                <p>
+                    We leverage the power of open-source software like WireGuard, pfSense, and Wazuh
+                    to deliver secure, reliable, and cost-effective solutions. Open-source ensures
+                    transparency, flexibility, and community-driven innovation.
+                </p>
+                <div class="feature-tech">
+                    <span class="tech-badge">WireGuard</span>
+                    <span class="tech-badge">pfSense</span>
+                    <span class="tech-badge">Wazuh</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Hardware Independence</h3>
+                </div>
+                <p>
+                    Our pfSense firewall solutions are designed to run on any hardware. In the event
+                    of hardware failure, your business remains operational, ensuring uninterrupted
+                    protection and peace of mind.
+                </p>
+                <div class="feature-benefits">
+                    <div class="benefit">✓ Vendor Independence</div>
+                    <div class="benefit">✓ Cost Savings</div>
+                    <div class="benefit">✓ Flexibility</div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Advanced Threat Detection</h3>
+                </div>
+                <p>
+                    We use state-of-the-art tools like OpenVAS and other vulnerability scanners to
+                    identify and mitigate risks before they can be exploited. Proactive security
+                    is at the core of our approach.
+                </p>
+                <div class="feature-tech">
+                    <span class="tech-badge">OpenVAS</span>
+                    <span class="tech-badge">Nessus</span>
+                    <span class="tech-badge">SIEM</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">👨‍💼</div>
+                    <h3>Expert Team</h3>
+                </div>
+                <p>
+                    With years of experience in cybersecurity, our certified team is dedicated to
+                    protecting your business. We operate solely to safeguard your digital assets
+                    and ensure your employees can work securely.
+                </p>
+                <div class="feature-certifications">
+                    <div class="cert">CISSP</div>
+                    <div class="cert">CEH</div>
+                    <div class="cert">GSEC</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="final-cta">
+    <div class="cta-container">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Secure Your Business?</h2>
+            <p class="cta-subtitle">
+                Join hundreds of businesses that trust Open Pulse Security to protect their digital assets.
+                Get started with a free security consultation today.
+            </p>
+            <div class="cta-actions">
+                <a href="{{ url_for('main.contact') }}" class="cta-button primary large">
+                    <span>Get Free Security Assessment</span>
+                    <i class="arrow">→</i>
+                </a>
+                <a href="{{ url_for('main.services') }}" class="cta-button secondary large">
+                    <span>View All Services</span>
+                </a>
+            </div>
+            <div class="cta-guarantee">
+                <div class="guarantee-badge">
+                    <span class="guarantee-icon">🛡️</span>
+                    <span class="guarantee-text">30-Day Money-Back Guarantee</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="contact">
+    <div class="contact-container">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Have questions or need assistance? We're here to help!</p>
+        <form action="{{ url_for('main.contact') }}" method="post" class="contact-form" novalidate>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required minlength="2">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help you..." required minlength="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                <span>Send Message</span>
+            </button>
+        </form>
+    </div>
+</section>
+
+<script>
+// Optional: Add form submission handling
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    const button = this.querySelector('.btn-primary');
+    button.classList.add('loading');
+    button.innerHTML = '<span>Sending...</span>';
+});
+</script>
+{% endblock %}

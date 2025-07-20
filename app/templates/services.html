@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="services">
+    <div class="services-container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Professional cybersecurity solutions tailored to your needs</p>
+
+        <div class="services-grid">
+            <!-- WireGuard VPN -->
+            <div class="service-card">
+                <div class="service-icon">🔒</div>
+                <h3 class="service-title">WireGuard VPN Setup</h3>
+                <p class="service-description">Secure your network with the fastest, most reliable VPN technology available.</p>
+                <div class="service-pricing">
+                    <div class="price-main">$200</div>
+                    <div class="price-details">one-time setup + $20/month</div>
+                </div>
+                <ul class="service-features">
+                    <li>Fast, secure VPN connection</li>
+                    <li>Easy setup and management</li>
+                    <li>Open-source technology</li>
+                    <li>24/7 monitoring included</li>
+                </ul>
+                <div class="btn-container">
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+
+            <!-- pfSense Firewall -->
+            <div class="service-card featured">
+                <div class="featured-badge">Most Popular</div>
+                <div class="service-icon">🛡️</div>
+                <h3 class="service-title">pfSense Firewall Setup</h3>
+                <p class="service-description">Deploy a robust enterprise-grade firewall to secure your entire network infrastructure.</p>
+                <div class="service-pricing">
+                    <div class="price-main">$600</div>
+                    <div class="price-details">one-time setup + $50/month</div>
+                </div>
+                <ul class="service-features">
+                    <li>Robust network security</li>
+                    <li>Open-source firewall</li>
+                    <li>Netgate hardware recommended</li>
+                    <li>Advanced threat protection</li>
+                </ul>
+                <div class="btn-container">
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Endpoint Security with Wazuh -->
+            <div class="service-card">
+                <div class="service-icon">🖥️</div>
+                <h3 class="service-title">Endpoint Security with Wazuh</h3>
+                <p class="service-description">Protect your devices from malware and unauthorized access with real-time monitoring.</p>
+                <div class="service-pricing">
+                    <div class="price-main">$300</div>
+                    <div class="price-details">one-time setup + $30/month</div>
+                </div>
+                <ul class="service-features">
+                    <li>Malware and intrusion detection</li>
+                    <li>Open-source endpoint protection</li>
+                    <li>Real-time alerts</li>
+                    <li>Compliance reporting</li>
+                </ul>
+                <div class="btn-container">
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Security Audits -->
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3 class="service-title">Security Audits</h3>
+                <p class="service-description">Get a comprehensive security assessment with detailed vulnerability reports and remediation plans.</p>
+                <div class="service-pricing">
+                    <div class="price-main">$500</div>
+                    <div class="price-details">per comprehensive audit</div>
+                </div>
+                <ul class="service-features">
+                    <li>Vulnerability assessment</li>
+                    <li>Detailed security report</li>
+                    <li>Actionable insights</li>
+                    <li>Follow-up consultation</li>
+                </ul>
+                <div class="btn-container">
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

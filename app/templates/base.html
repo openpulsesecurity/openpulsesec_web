@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Open Pulse Security - Enterprise Cybersecurity Solutions{% endblock %}</title>
+    <meta name="description" content="{% block description %}Professional cybersecurity services powered by open-source technology. Protect your business with our comprehensive security solutions.{% endblock %}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='images/openlogo.png') }}" alt="Open Pulse Security Logo">
+                    <div class="logo-text">
+                        <span class="company-name">Open Pulse Security</span>
+                        <span class="company-tagline">Cybersecurity Excellence</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="{{ url_for('main.index') }}" class="nav-link {% if request.endpoint == 'main.index' %}active{% endif %}">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('main.services') }}" class="nav-link {% if request.endpoint == 'main.services' %}active{% endif %}">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('main.contact') }}" class="nav-link {% if request.endpoint == 'main.contact' %}active{% endif %}">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('main.solutions') }}" class="nav-link {% if request.endpoint == 'main.solutions' %}active{% endif %}">
+                            <i class="fas fa-tools"></i>
+                            <span>Solutions</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div class="header-contact">
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                </div>
+                <a href="{{ url_for('main.contact') }}" class="header-cta-btn">
+                    <span>Get Quote</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav">
+            <ul class="mobile-nav-menu">
+                <li><a href="{{ url_for('main.index') }}" class="mobile-nav-link">Home</a></li>
+                <li><a href="{{ url_for('main.services') }}" class="mobile-nav-link">Services</a></li>
+                <li><a href="{{ url_for('main.contact') }}" class="mobile-nav-link">Contact</a></li>
+                <li><a href="mailto:support@openpulsesecurity.com" class="mobile-nav-link">Email Support</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+                <div class="flash {{ category }}">
+                    <div class="flash-content">
+                        <i class="flash-icon fas {% if category == 'success' %}fa-check-circle{% else %}fa-exclamation-triangle{% endif %}"></i>
+                        <span class="flash-text">{{ message }}</span>
+                        <button class="flash-close" onclick="this.parentElement.parentElement.remove()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo">
+                        <img src="{{ url_for('static', filename='images/openlogo.png') }}" alt="Open Pulse Security Logo">
+                        <div class="footer-logo-text">
+                            <span class="footer-company-name">Open Pulse Security</span>
+                            <span class="footer-tagline">Protecting Your Digital Future</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Leading cybersecurity solutions powered by open-source technology.
+                        We protect businesses from evolving digital threats with comprehensive,
+                        cost-effective security services.
+                    </p>
+                    <div class="footer-certifications">
+                        <div class="cert-badge">ISO 27001</div>
+                        <div class="cert-badge">SOC 2</div>
+                        <div class="cert-badge">GDPR</div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ url_for('main.services') }}">WireGuard VPN Setup</a></li>
+                        <li><a href="{{ url_for('main.services') }}">pfSense Firewall</a></li>
+                        <li><a href="{{ url_for('main.services') }}">Endpoint Security</a></li>
+                        <li><a href="{{ url_for('main.services') }}">Security Audits</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service">Terms of Service</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact & Support</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:support@openpulsesecurity.com">support@openpulsesecurity.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>24/7 Emergency Support</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Response Time: < 1 Hour</span>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <h5>Follow Us</h5>
+                        <div class="social-icons">
+                            <a href="https://instagram.com/openpulsesecurity" target="_blank" aria-label="Instagram" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://gitlab.com/openpulsesecurity" target="_blank" aria-label="GitLab" class="social-link">
+                                <i class="fab fa-gitlab"></i>
+                            </a>
+                            <a href="https://mastodon.social/@openpulsesecurity" target="_blank" aria-label="Mastodon" class="social-link">
+                                <i class="fab fa-mastodon"></i>
+                            </a>
+                            <a href="https://linkedin.com/company/openpulsesecurity" target="_blank" aria-label="LinkedIn" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2025 Open Pulse Security. All rights reserved.</p>
+                    </div>
+                    <div class="footer-bottom-links">
+                        <a href="/sitemap">Sitemap</a>
+                        <a href="/accessibility">Accessibility</a>
+                        <a href="/security">Security</a>
+                    </div>
+                    <div class="footer-trust">
+                        <div class="trust-badge">
+                            <i class="fas fa-shield-check"></i>
+                            <span>Trusted by 500+ Businesses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const body = document.body;
+
+            mobileToggle.addEventListener('click', function() {
+                mobileToggle.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+                body.classList.toggle('mobile-menu-open');
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileToggle.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                    body.classList.remove('mobile-menu-open');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
