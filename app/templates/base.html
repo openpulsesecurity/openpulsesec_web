@@ -33,6 +33,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{ url_for('main.solutions') }}" class="nav-link {% if request.endpoint == 'main.solutions' %}active{% endif %}">
+                            <i class="fas fa-tools"></i>
+                            <span>Solutions</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ url_for('main.services') }}" class="nav-link {% if request.endpoint == 'main.services' %}active{% endif %}">
                             <i class="fas fa-shield-alt"></i>
                             <span>Services</span>
@@ -42,12 +48,6 @@
                         <a href="{{ url_for('main.contact') }}" class="nav-link {% if request.endpoint == 'main.contact' %}active{% endif %}">
                             <i class="fas fa-envelope"></i>
                             <span>Contact</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url_for('main.solutions') }}" class="nav-link {% if request.endpoint == 'main.solutions' %}active{% endif %}">
-                            <i class="fas fa-tools"></i>
-                            <span>Solutions</span>
                         </a>
                     </li>
                 </ul>
