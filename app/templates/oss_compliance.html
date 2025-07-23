@@ -1,10 +1,219 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block title %}Open Source Compliance - Open Pulse Security{% endblock %}
+{% block description %}Learn how Open Pulse Security complies with the licensing terms of the open-source software we use. Transparent, ethical, and respectful of the open-source community.{% endblock %}
+
+{% block content %}
+<section class="cta-section">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">Open Source Compliance</h1>
+            <p class="hero-subtitle">
+                At Open Pulse Security, we are committed to respecting and complying with the licensing terms of the open-source software we use. Transparency and ethical practices are at the core of our operations.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Compliant</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Open Source Projects</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="compliance-grid-section">
+    <div class="compliance-container">
+        <div class="section-header">
+            <h2 class="section-title">Our Commitment to Open Source</h2>
+            <p class="section-subtitle">
+                We believe in transparency and ethical use of open-source software. Here’s how we ensure compliance with the licenses of the tools we use.
+            </p>
+        </div>
+
+        <div class="compliance-grid">
+            <div class="compliance-card">
+                <div class="compliance-header">
+                    <div class="compliance-logo">
+                        <img src="{{ url_for('static', filename='images/wireguard-logo.png') }}" alt="WireGuard Logo" onerror="this.style.display='none'">
+                        <div class="compliance-icon">🔒</div>
+                    </div>
+                    <div class="compliance-title-area">
+                        <h3 class="compliance-title">WireGuard VPN</h3>
+                        <div class="compliance-category">GNU GPLv2</div>
+                    </div>
+                </div>
+                
+                <div class="compliance-description">
+                    <p>
+                        WireGuard is licensed under the GNU General Public License v2 (GPLv2). We use WireGuard to provide secure VPN solutions for our clients. If we distribute modified versions of WireGuard, we provide the source code in compliance with the GPLv2 license.
+                    </p>
+                </div>
+
+                <div class="compliance-links">
+                    <a href="https://www.wireguard.com/" target="_blank" class="compliance-link primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Official Website
+                    </a>
+                    <a href="https://github.com/WireGuard" target="_blank" class="compliance-link secondary">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </a>
+                </div>
+            </div>
+
+            <div class="compliance-card">
+                <div class="compliance-header">
+                    <div class="compliance-logo">
+                        <img src="{{ url_for('static', filename='images/pfsense-logo.png') }}" alt="pfSense Logo" onerror="this.style.display='none'">
+                        <div class="compliance-icon">🛡️</div>
+                    </div>
+                    <div class="compliance-title-area">
+                        <h3 class="compliance-title">pfSense Firewall</h3>
+                        <div class="compliance-category">Apache License 2.0</div>
+                    </div>
+                </div>
+                
+                <div class="compliance-description">
+                    <p>
+                        pfSense is licensed under the Apache License 2.0. We deploy and manage pfSense firewalls for our clients. We provide proper attribution to the pfSense project and comply with the terms of the Apache License 2.0.
+                    </p>
+                </div>
+
+                <div class="compliance-links">
+                    <a href="https://www.pfsense.org/" target="_blank" class="compliance-link primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Official Website
+                    </a>
+                    <a href="https://github.com/pfsense/pfsense" target="_blank" class="compliance-link secondary">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </a>
+                </div>
+            </div>
+
+            <div class="compliance-card">
+                <div class="compliance-header">
+                    <div class="compliance-logo">
+                        <img src="{{ url_for('static', filename='images/wazuh-logo.png') }}" alt="Wazuh Logo" onerror="this.style.display='none'">
+                        <div class="compliance-icon">🔍</div>
+                    </div>
+                    <div class="compliance-title-area">
+                        <h3 class="compliance-title">Wazuh SIEM & XDR</h3>
+                        <div class="compliance-category">GNU GPLv2</div>
+                    </div>
+                </div>
+                
+                <div class="compliance-description">
+                    <p>
+                        Wazuh is licensed under the GNU General Public License v2 (GPLv2). We use Wazuh for security monitoring and intrusion detection. If we distribute modified versions of Wazuh, we provide the source code in compliance with the GPLv2 license.
+                    </p>
+                </div>
+
+                <div class="compliance-links">
+                    <a href="https://wazuh.com/" target="_blank" class="compliance-link primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Official Website
+                    </a>
+                    <a href="https://github.com/wazuh/wazuh" target="_blank" class="compliance-link secondary">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </a>
+                </div>
+            </div>
+
+            <div class="compliance-card">
+                <div class="compliance-header">
+                    <div class="compliance-logo">
+                        <img src="{{ url_for('static', filename='images/openvas-logo.png') }}" alt="OpenVAS Logo" onerror="this.style.display='none'">
+                        <div class="compliance-icon">🔬</div>
+                    </div>
+                    <div class="compliance-title-area">
+                        <h3 class="compliance-title">OpenVAS Scanner</h3>
+                        <div class="compliance-category">GNU GPLv2</div>
+                    </div>
+                </div>
+                
+                <div class="compliance-description">
+                    <p>
+                        OpenVAS is licensed under the GNU General Public License v2 (GPLv2). We utilize OpenVAS for vulnerability assessments and security audits. If we distribute modified versions of OpenVAS, we provide the source code in compliance with the GPLv2 license.
+                    </p>
+                </div>
+
+                <div class="compliance-links">
+                    <a href="https://www.openvas.org/" target="_blank" class="compliance-link primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Official Website
+                    </a>
+                    <a href="https://github.com/greenbone/openvas-scanner" target="_blank" class="compliance-link secondary">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-compliance">
+    <div class="compliance-container">
+        <div class="section-header">
+            <h2 class="section-title">Why Compliance Matters</h2>
+            <p class="section-subtitle">
+                Open source software is the backbone of our services, and we take our responsibility to comply with its licenses seriously. Here’s why it’s important:
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">🔍</div>
+                <h3>Transparency</h3>
+                <p>We believe in full transparency. By complying with open-source licenses, we ensure that our clients and the community can trust our practices.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">⚖️</div>
+                <h3>Legal Integrity</h3>
+                <p>Compliance ensures that we operate within the legal frameworks set by the open-source community, protecting both our clients and our business.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">🌍</div>
+                <h3>Community Respect</h3>
+                <p>We respect the hard work of the open-source community. Compliance is our way of giving back and supporting the projects we rely on.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">🔒</div>
+                <h3>Security</h3>
+                <p>By adhering to open-source licenses, we ensure that our solutions are secure, reliable, and free from legal risks.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Have Questions About Our Compliance?</h2>
+        <p>
+            If you have any questions about how we comply with open-source licenses or need access to source code, feel free to reach out to us.
+        </p>
+        <div class="cta-actions">
+            <a href="{{ url_for('main.contact') }}" class="cta-button primary">
+                <span>Contact Us</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="{{ url_for('main.solutions') }}" class="cta-button secondary">
+                <span>View Our Solutions</span>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
