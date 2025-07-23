@@ -4,8 +4,7 @@
 {% block description %}Learn about Open Pulse Security, our mission, and our team of cybersecurity experts.{% endblock %}
 
 {% block content %}
-<!-- About Hero Section -->
-<section class="about-hero">
+<section class="cta-section">
     <div class="container">
         <h1 class="hero-title">About Open Pulse Security</h1>
         <p class="hero-subtitle">
@@ -28,7 +27,6 @@
     </div>
 </section>
 
-<!-- Mission & Vision Section -->
 <section class="mission-section">
     <div class="mission-container">
         <div class="mission-content">
@@ -98,7 +96,6 @@
     </div>
 </section>
 
-<!-- Team Section -->
 <section class="team-section">
     <div class="team-container">
         <h2 class="section-title">Our Expert Team</h2>
@@ -178,7 +175,6 @@
     </div>
 </section>
 
-<!-- Values Section -->
 <section class="values-section">
     <div class="values-container">
         <h2 class="section-title">Our Core Values</h2>
@@ -215,8 +211,7 @@
     </div>
 </section>
 
-<!-- About CTA -->
-<section class="about-cta">
+<section class="cta-section">
     <div class="container">
         <h2>Ready to Secure Your Business?</h2>
         <p>
@@ -224,11 +219,11 @@
             Let's discuss how our open-source cybersecurity solutions can safeguard your organization.
         </p>
         <div class="cta-actions">
-            <a href="/contact" class="btn btn-primary">
+            <a href="{{ url_for('main.contact') }}" class="cta-button primary">
                 <i class="fas fa-comments"></i>
                 Get Started Today
             </a>
-            <a href="/solutions" class="btn btn-secondary">
+            <a href="{{ url_for('main.solutions') }}" class="cta-button secondary">
                 <i class="fas fa-shield-alt"></i>
                 View Our Solutions
             </a>
