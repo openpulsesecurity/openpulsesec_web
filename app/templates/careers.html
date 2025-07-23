@@ -4,8 +4,7 @@
 {% block description %}Join our team of cybersecurity experts and help protect businesses worldwide with cutting-edge open-source solutions.{% endblock %}
 
 {% block content %}
-<!-- Careers Hero Section -->
-<section class="careers-hero">
+<section class="cta-section">
     <div class="container">
         <h1 class="hero-title">Join Our Mission</h1>
         <p class="hero-subtitle">
@@ -28,7 +27,6 @@
     </div>
 </section>
 
-<!-- Why Work With Us Section -->
 <section class="why-work-section">
     <div class="why-work-container">
         <div class="why-work-content">
@@ -98,7 +96,6 @@
     </div>
 </section>
 
-<!-- Benefits Section -->
 <section class="benefits-section">
     <div class="benefits-container">
         <h2 class="section-title">Comprehensive Benefits</h2>
@@ -154,7 +151,6 @@
     </div>
 </section>
 
-<!-- Current Status Section -->
 <section class="current-status-section">
     <div class="status-container">
         <div class="status-card">
@@ -199,7 +195,6 @@
     </div>
 </section>
 
-<!-- Future Roles Section -->
 <section class="future-roles-section">
     <div class="future-roles-container">
         <h2 class="section-title">Roles We'll Be Hiring For</h2>
@@ -259,8 +254,7 @@
     </div>
 </section>
 
-<!-- Careers CTA -->
-<section class="careers-cta">
+<section class="cta-section">
     <div class="container">
         <h2>Interested in Future Opportunities?</h2>
         <p>
@@ -268,11 +262,11 @@
             Send us your resume and we'll reach out when the right opportunity becomes available.
         </p>
         <div class="cta-actions">
-            <a href="mailto:careers@openpulsesecurity.com" class="btn btn-primary">
+            <a href="mailto:careers@openpulsesecurity.com" class="cta-button btn-secondary">
                 <i class="fas fa-envelope"></i>
                 Send Your Resume
             </a>
-            <a href="/contact" class="btn btn-secondary">
+            <a href="{{ url_for('main.contact') }}" class="cta-button primary">
                 <i class="fas fa-comments"></i>
                 Stay in Touch
             </a>
