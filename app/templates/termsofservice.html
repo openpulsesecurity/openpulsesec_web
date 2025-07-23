@@ -4,8 +4,7 @@
 {% block description %}Review our Terms of Service to understand the rules and guidelines for using our cybersecurity services.{% endblock %}
 
 {% block content %}
-<!-- Terms Hero Section -->
-<section class="terms-hero">
+<section class="cta-section">
     <div class="container">
         <h1 class="hero-title">Terms of Service</h1>
         <p class="hero-subtitle">
@@ -28,7 +27,6 @@
     </div>
 </section>
 
-<!-- Terms Content Section -->
 <section class="terms-content-section">
     <div class="terms-container">
         <div class="terms-sidebar">
@@ -542,8 +540,7 @@
     </div>
 </section>
 
-<!-- Terms CTA -->
-<section class="terms-cta">
+<section class="cta-section">
     <div class="container">
         <h2>Questions About Our Terms?</h2>
         <p>
@@ -551,11 +548,11 @@
             or need clarification on any aspect of our service agreement, please don't hesitate to contact us.
         </p>
         <div class="cta-actions">
-            <a href="mailto:legal@openpulsesecurity.com" class="btn btn-primary">
+            <a href="mailto:legal@openpulsesecurity.com" class="cta-button btn-primary">
                 <i class="fas fa-envelope"></i>
                 Contact Legal Team
             </a>
-            <a href="/contact" class="btn btn-secondary">
+            <a href="{{ url_for('main.contact') }}" class="cta-button btn-secondary">
                 <i class="fas fa-comments"></i>
                 General Contact
             </a>
