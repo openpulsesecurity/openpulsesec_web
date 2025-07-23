@@ -4,8 +4,7 @@
 {% block description %}Read our Privacy Policy to understand how we protect your data and respect your privacy.{% endblock %}
 
 {% block content %}
-<!-- Privacy Hero Section -->
-<section class="privacy-hero">
+<section class="cta-section">
     <div class="container">
         <h1 class="hero-title">Privacy Policy</h1>
         <p class="hero-subtitle">
@@ -28,7 +27,6 @@
     </div>
 </section>
 
-<!-- Privacy Content Section -->
 <section class="privacy-content-section">
     <div class="privacy-container">
         <div class="privacy-sidebar">
@@ -365,8 +363,7 @@
     </div>
 </section>
 
-<!-- Privacy CTA -->
-<section class="privacy-cta">
+<section class="cta-section">
     <div class="container">
         <h2>Questions About Our Privacy Policy?</h2>
         <p>
@@ -374,11 +371,11 @@
             don't hesitate to reach out to our Data Protection Officer.
         </p>
         <div class="cta-actions">
-            <a href="mailto:privacy@openpulsesecurity.com" class="btn btn-primary">
+            <a href="mailto:privacy@openpulsesecurity.com" class="cta-button btn-primary">
                 <i class="fas fa-envelope"></i>
                 Contact Privacy Team
             </a>
-            <a href="/contact" class="btn btn-secondary">
+            <a href="{{ url_for('main.contact') }}" class="cta-button secondary">
                 <i class="fas fa-comments"></i>
                 General Contact
             </a>
