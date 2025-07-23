@@ -24,6 +24,10 @@ def pricing():
 def solutions():
     return render_template('solutions.html')
 
+@main.route('/oss-compliance')
+def oss_compliance():
+    return render_template('oss_compliance.html')
+
 @main.route('/about')
 def about():
     return render_template('about.html')
