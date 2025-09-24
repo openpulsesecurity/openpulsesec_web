@@ -33,7 +33,7 @@ Welcome to the official repository for the Open Pulse Security website. This web
 1. Clone the repository:
    
    ```bash
-   git clone https://github.com/open-pulse-security/openpulsesec_web.git
+   git clone https://github.com/openpulsesecurity/openpulsesec_web.git
    cd openpulsesec_web
    ```
 2. Set up a virtual environment:
